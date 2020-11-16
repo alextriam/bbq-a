@@ -47,6 +47,8 @@ ru:
       back: Назад
     show:
       edit_event: Редактирование события
+      delete_event: Удалить событие
+      delete_confirm: Вы уверены? Точно удалить событие?
 
   users:
     show: 

@@ -18,6 +18,7 @@
             <div class="buffer-both">
               <%= link_to t(".edit_event"), edit_event_path(@event),
                 class: 'btn btn-primary' %>
+              <%= link_to t(".delete_event"), event_path(@event), method: :delete, data: { confirm: "#{t(".delete_confirm")}" }, class: "btn btn-danger" %>  
              </div>
           <% end %>
         </div>
