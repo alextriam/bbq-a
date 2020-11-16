@@ -38,12 +38,12 @@
             <li><%= link_to "Link3", "/path3", class: "nav-link"  %></li>
           </li>
           <% if user_signed_in? %>
-            <li><%= link_to 'Профиль', current_user, class: "nav-link" %></li>
-            <li><%= link_to 'Выйти', destroy_user_session_path,
+            <li><%= link_to t(".profile"), current_user, class: "nav-link" %></li>
+            <li><%= link_to t(".sign_out"), destroy_user_session_path,
                     method: :delete, class: "nav-link"  %></li>
           <% else %>
-            <li><%= link_to 'Войти', new_user_session_path, class: "nav-link"  %></li>
-            <li><%= link_to 'Зарегистрироваться',
+            <li><%= link_to t(".sign_in"), new_user_session_path, class: "nav-link"  %></li>
+            <li><%= link_to t(".registration"),
                     new_user_registration_path, class: "nav-link"  %></li>
           <% end %>
         </ul>
