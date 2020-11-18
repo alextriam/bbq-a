@@ -37,6 +37,12 @@ ru:
       registration: Зарегистрироваться
       profile: Профиль
 
+  controllers:
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'    
+
   events:
     index:
       events: События
@@ -49,6 +55,10 @@ ru:
       edit_event: Редактирование события
       delete_event: Удалить событие
       delete_confirm: Вы уверены? Точно удалить событие?
+      go_to_event: 'Пойдут:'
+      i_go: 'Я пойду:'
+    form:
+      save: Сохранить  
 
   users:
     show: 
@@ -61,8 +71,12 @@ ru:
       edit_user: Редактирование профиля
       change_password: Сменить пароль
       show_event: Показать
-      back: Назад             
-
+      back: Назад
+  comments:
+    comment:
+    destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'                
+    form:
+      send: Отправить
   activerecord:
     models:
       event: Событие

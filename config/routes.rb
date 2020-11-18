@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   # корень сайта
   root to: "events#index"
 
-  resources :events
+  resources :events do
+    # Вложенный ресурс комментов
+    # Нам понадобится два экшена: create и destroy
+    resources :comments, only: [:create, :destroy]
+  end
+    
   resources :users, only: [:show, :edit, :update]
 end
