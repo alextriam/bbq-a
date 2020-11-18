@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # Юзер может создавать много событий
   has_many :events
+  has_many :subscriptions
 
   # Добавим заодно валидации для юзера
   # Имя не не более 35 символов
@@ -15,7 +16,6 @@ class User < ApplicationRecord
   # validates :email, presence: true, length: {maximum: 255}
   # validates :email, uniqueness: true
   # validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
-
 
   private
 

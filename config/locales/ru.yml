@@ -41,8 +41,18 @@ ru:
     comments:
       destroyed: 'Комментарий удален'
       created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'    
-
+      error: 'Ошибка с комментарием'  
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+        
+  subscriptions:
+    form:
+      subscribe: Подписаться
+      subscription:
+        destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'      
+        
   events:
     index:
       events: События
