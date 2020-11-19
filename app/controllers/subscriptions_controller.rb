@@ -9,8 +9,10 @@ class SubscriptionsController < ApplicationController
     # Болванка для новой подписки
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
-
-    if @new_subscription.save
+    
+    if current_user.event_ids.include?(@event.id)
+      redirect_to @event
+    elsif  @new_subscription.save
       # Если сохранилась, редиректим на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
