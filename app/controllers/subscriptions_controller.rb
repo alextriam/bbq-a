@@ -9,8 +9,8 @@ class SubscriptionsController < ApplicationController
     # Болванка для новой подписки
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
-    
-    if current_user.event_ids.include?(@event.id)
+
+    if my_event? || email_exist?
       redirect_to @event
     elsif  @new_subscription.save
       # Если сохранилась, редиректим на страницу самого события
@@ -33,6 +33,22 @@ class SubscriptionsController < ApplicationController
   end
 
   private
+
+    def email_exist?
+      if current_user
+        false
+      else
+        User.find_by(email: @new_subscription.user_email).present? ? true : false
+      end
+    end
+
+    def my_event?
+      if current_user
+        current_user.event_ids.include?(@event.id) ? true : false
+      else
+        false
+      end
+    end
 
     def set_subscription
       @subscription = @event.subscriptions.find(params[:id])

@@ -39,13 +39,14 @@ ru:
 
   controllers:
     comments:
-      destroyed: 'Комментарий удален'
-      created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'  
+      destroyed: Комментарий удален
+      created: Ваш комментарий добавлен
+      error: Ошибка с комментарием'  
     subscriptions:
-      created: 'Вы подписаны на это событие'
-      destroyed: 'Участник отписан'
-      error: 'Подписка/отписка не сработала'
+      created: Вы подписаны на это событие
+      destroyed: Участник отписан
+      error: Подписка/отписка не сработала
+      email_error: Email уже используется!
         
   subscriptions:
     form:

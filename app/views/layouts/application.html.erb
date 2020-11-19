@@ -50,8 +50,11 @@
       <div class="row">
         <div class="col-lg-9">
           <%# bootstrap_flash %>
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <% flash.each do |type, msg| %>
+            <div class="alert alert-info">
+              <%= msg %>
+            </div>
+          <% end %>
 
           <%= yield %>
         </div>
