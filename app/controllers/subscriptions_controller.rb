@@ -10,9 +10,7 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if my_event? || email_exist?
-      redirect_to @event
-    elsif  @new_subscription.save
+    if @new_subscription.save
       # Если сохранилась, редиректим на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
@@ -33,23 +31,7 @@ class SubscriptionsController < ApplicationController
   end
 
   private
-
-    def email_exist?
-      if current_user
-        false
-      else
-        User.find_by(email: @new_subscription.user_email).present? ? true : false
-      end
-    end
-
-    def my_event?
-      if current_user
-        current_user.event_ids.include?(@event.id) ? true : false
-      else
-        false
-      end
-    end
-
+  
     def set_subscription
       @subscription = @event.subscriptions.find(params[:id])
     end

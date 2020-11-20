@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 ru:
+  app:
+    email_used: Email уже используется
   layouts:
     application:
       sign_in: Войти
@@ -47,12 +49,12 @@ ru:
       destroyed: Участник отписан
       error: Подписка/отписка не сработала
       email_error: Email уже используется!
-        
+    
   subscriptions:
     form:
       subscribe: Подписаться
-      subscription:
-        destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'      
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'      
         
   events:
     index:

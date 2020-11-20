@@ -8,6 +8,10 @@ class Subscription < ApplicationRecord
   # Проверки user_name и user_email выполняются,
   # только если user не задан
   # То есть для анонимных пользователей
+
+  validates :user_email, email_exist: true
+  validates :user, my_event: true
+
   validates :user_name, presence: true, unless: -> { user.present? }
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
 
@@ -16,8 +20,6 @@ class Subscription < ApplicationRecord
 
   # Или один email может использоваться только один раз (если анонимная подписка)
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
-
-  
 
   # Если есть юзер, выдаем его имя,
   # если нет – дергаем исходный метод
