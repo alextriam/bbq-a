@@ -5,6 +5,6 @@ class EmailExistValidator < ActiveModel::EachValidator
       false
     else
       true
-    end  
+    end
   end
 end

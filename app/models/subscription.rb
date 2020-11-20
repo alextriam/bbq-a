@@ -9,7 +9,7 @@ class Subscription < ApplicationRecord
   # только если user не задан
   # То есть для анонимных пользователей
 
-  validates :user_email, email_exist: true
+  validates :user_email, email_exist: true, if: -> { user.blank? }
   validates :user, my_event: true
 
   validates :user_name, presence: true, unless: -> { user.present? }
