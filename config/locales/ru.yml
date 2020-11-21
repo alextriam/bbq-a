@@ -31,7 +31,14 @@
 
 ru:
   app:
-    email_used: Email уже используется
+    error:
+      zero: нет ошибок
+      one: '%{count} ошибка'
+      few: '%{count} ошибки'
+      many: '%{count} ошибок'
+      other: ошибки
+    email_used: уже используется
+    user_event: Вы не можете подписаться на свое событие
   layouts:
     application:
       sign_in: Войти
