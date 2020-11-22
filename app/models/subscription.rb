@@ -23,13 +23,13 @@ class Subscription < ApplicationRecord
 
   def user_email_check
     if User.find_by(email: user_email).present?
-      errors.add :email, I18n.t("app.email_used")
+      errors.add(:user_email, :taken)
     end
   end
 
   def user_event
     if event.user == user
-      errors.add :event, I18n.t("app.user_event")
+      errors.add(:event, :user_event)
     end
   end
   # Если есть юзер, выдаем его имя,

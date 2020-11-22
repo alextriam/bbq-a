@@ -37,8 +37,7 @@ ru:
       few: '%{count} ошибки'
       many: '%{count} ошибок'
       other: ошибки
-    email_used: уже используется
-    user_event: Вы не можете подписаться на свое событие
+    
   layouts:
     application:
       sign_in: Войти
@@ -78,7 +77,9 @@ ru:
       go_to_event: 'Пойдут:'
       i_go: 'Я пойду:'
     form:
-      save: Сохранить  
+      save: Сохранить
+    update:
+      event_updated: Событие обновлено  
 
   users:
     show: 
@@ -101,6 +102,7 @@ ru:
     models:
       event: Событие
       user: Пользователь
+      subscription: Подписка
     attributes:
       event:
         title: Название
@@ -110,3 +112,9 @@ ru:
       user:
         email: Почта
         name: Имя
+    errors:
+      models:
+        subscription:
+          attributes:
+            event: 
+              user_event: Вы не можете подписаться на свое событие 
