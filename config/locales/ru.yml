@@ -80,6 +80,8 @@ ru:
       delete_confirm: Вы уверены? Точно удалить событие?
       go_to_event: 'Пойдут:'
       i_go: 'Я пойду:'
+    create:
+      event_created: Событие успешно создано
     form:
       save: Сохранить
     update:
