@@ -55,6 +55,10 @@ ru:
       destroyed: Участник отписан
       error: Подписка/отписка не сработала
       email_error: Email уже используется!
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'  
     
   subscriptions:
     form:
@@ -103,6 +107,7 @@ ru:
       event: Событие
       user: Пользователь
       subscription: Подписка
+      photo: 'Фотография'
     attributes:
       event:
         title: Название
@@ -114,9 +119,12 @@ ru:
         name: Имя
         avatar: 'Аватарка'
         password: 'Пароль'
+      photo:
+        photo: 'Фотография'  
     errors:
       models:
         subscription:
           attributes:
             event: 
               user_event: Вы не можете подписаться на свое событие 
+ 
