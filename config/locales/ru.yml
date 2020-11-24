@@ -112,6 +112,8 @@ ru:
       user:
         email: Почта
         name: Имя
+        avatar: 'Аватарка'
+        password: 'Пароль'
     errors:
       models:
         subscription:
