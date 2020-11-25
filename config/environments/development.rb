@@ -70,7 +70,7 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     port: '587',
     user_name: 'a.kurov2020@gmail.com', # не используйте для тестов свои реальные ящики
-    password: 'COFFEE_USA_VISA_XBOX',
+    password: '-------------',
     authentication: 'plain',
     enable_starttls_auto: true
   }
