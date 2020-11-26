@@ -142,6 +142,7 @@ Rails.application.configure do
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
     :domain         => 'bbq-a.herokuapp.com',
+    :protocol => 'https',
     :enable_starttls_auto => true
   }
 end
