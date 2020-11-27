@@ -133,6 +133,7 @@ Rails.application.configure do
   #   :domain         => 'bbq-a.heroku.com',
   #   :authentication => :plain,
   # }
+  config.action_mailer.asset_host = 'https://bbq-a.herokuapp.com'
 
   # А это для SendGrid
   ActionMailer::Base.smtp_settings = {
@@ -145,8 +146,8 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = { 
-    host: 'bbq-a.herokuapp.com', 
+  config.action_mailer.default_url_options = {
+    host: 'bbq-a.herokuapp.com',
     protocol: 'https'
   }
 end
