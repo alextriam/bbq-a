@@ -15,6 +15,15 @@ class EventMailer < ApplicationMailer
     mail to: event.user.email, subject: "Новая подписка на #{event.title}"
   end
 
+  def photo(event, photo, email)
+    @photo = photo
+    @event = event
+
+    # Берём у юзер его email
+    # Subject тоже можно переносить в локали
+    mail to: email, subject: "Новая фотография добавлена к #{event.title}"
+  end
+
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #

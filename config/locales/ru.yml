@@ -122,6 +122,11 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      add_photo: добавил фото
+      event: Событие
+      datetime: Состоится
+      owner: Организатор
       
   activerecord:
     models:

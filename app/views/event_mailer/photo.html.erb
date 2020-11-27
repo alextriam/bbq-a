@@ -1,0 +1,12 @@
+<h1><%= @photo.user.name %> <%= t '.add_photo' %></h1>
+<p><%= image_tag @photo.photo.url %></p>
+<hr/>
+
+<%= t '.event' %>
+<h3><%= @event.title %></h3>
+
+<%= t '.datetime' %>
+<h4><%= l(@event.datetime, format: :short) %></h4>
+
+<%= t '.owner' %>
+<h4><%= @event.user.name %></h4>

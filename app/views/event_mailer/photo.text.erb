@@ -1,0 +1,10 @@
+<%= @photo.user.name %> <%= t '.add_photo' %>: 
+----
+
+<%= image_tag @photo.photo.url %>
+
+
+--------------------------------
+<%= t '.event' %>: <%= @event.title %>
+<%= t '.datetime' %>: <%= l(@event.datetime, format: :short) %>
+<%= t '.owner' %>: <%= @event.user.name %>

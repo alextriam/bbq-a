@@ -66,11 +66,13 @@ Rails.application.configure do
   config.i18n.available_locales = :ru
   config.i18n.default_locale = :ru
 
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: '587',
-    user_name: 'a.kurov2020@gmail.com', # не используйте для тестов свои реальные ящики
-    password: '-------------',
+    user_name: ENV['BBQ_EMAIL'], # не используйте для тестов свои реальные ящики
+    password: ENV['BBQ_EMAIL_PASSWORD'],
     authentication: 'plain',
     enable_starttls_auto: true
   }
